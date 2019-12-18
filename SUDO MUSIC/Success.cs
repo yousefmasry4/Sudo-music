@@ -15,6 +15,7 @@ namespace SUDO_MUSIC
         private int _ticks;
         public Success()
         {
+
             InitializeComponent();
             
             timer1.Start();
