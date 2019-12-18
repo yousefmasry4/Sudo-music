@@ -10,36 +10,56 @@ using System.Windows.Forms;
 
 namespace SUDO_MUSIC
 {
-    
+
+
     public partial class Form1 : Form
     {
-        public int ip { set; get; }
+        public string ip { set; get; }
+        
         public Form1()
         {
             InitializeComponent();
         }
-
+        
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            ip = int.Parse(textBox1.Text);
+           
 
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8 && chr != 46)
+            {
+                e.Handled = true;
+
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (ip==0)
+
+
+            if (textBox1.Text == "0")
             {
                 this.Hide();
                 FAILED f1 = new FAILED();
                 f1.ShowDialog();
             }
-            else if(ip==1)
+            else if (textBox1.Text == "1")
             {
                 this.Hide();
                 Success f2 = new Success();
                 f2.ShowDialog();
 
             }
+            else
+
+                MessageBox.Show("Enter a valid number");
         }
+
     }
 }
