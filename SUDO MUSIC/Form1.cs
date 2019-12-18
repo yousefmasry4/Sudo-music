@@ -58,8 +58,12 @@ namespace SUDO_MUSIC
             }
             else
 
-                MessageBox.Show("Enter a valid number");
+                MessageBox.Show("Enter a valid ip");
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

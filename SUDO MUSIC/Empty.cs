@@ -16,5 +16,15 @@ namespace SUDO_MUSIC
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Empty_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

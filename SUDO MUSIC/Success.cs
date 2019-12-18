@@ -31,5 +31,10 @@ namespace SUDO_MUSIC
                 timer1.Stop();
             }
         }
+
+        private void Success_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

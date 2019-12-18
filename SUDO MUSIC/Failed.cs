@@ -32,6 +32,11 @@ namespace SUDO_MUSIC
             }
 
 
-        }    
+        }
+
+        private void FAILED_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
