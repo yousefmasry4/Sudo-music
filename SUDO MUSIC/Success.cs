@@ -16,6 +16,7 @@ namespace SUDO_MUSIC
         public Success()
         {
             InitializeComponent();
+            
             timer1.Start();
         }
 
