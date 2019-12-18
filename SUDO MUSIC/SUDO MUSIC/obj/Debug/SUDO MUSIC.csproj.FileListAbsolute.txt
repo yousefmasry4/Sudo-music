@@ -1,0 +1,11 @@
+C:\Users\maham\OneDrive\Desktop\SUDO MUSIC\SUDO MUSIC\bin\Debug\SUDO MUSIC.exe.config
+C:\Users\maham\OneDrive\Desktop\SUDO MUSIC\SUDO MUSIC\bin\Debug\SUDO MUSIC.exe
+C:\Users\maham\OneDrive\Desktop\SUDO MUSIC\SUDO MUSIC\bin\Debug\SUDO MUSIC.pdb
+C:\Users\maham\OneDrive\Desktop\SUDO MUSIC\SUDO MUSIC\obj\Debug\SUDO_MUSIC.Form1.resources
+C:\Users\maham\OneDrive\Desktop\SUDO MUSIC\SUDO MUSIC\obj\Debug\SUDO_MUSIC.Properties.Resources.resources
+C:\Users\maham\OneDrive\Desktop\SUDO MUSIC\SUDO MUSIC\obj\Debug\SUDO MUSIC.csproj.GenerateResource.cache
+C:\Users\maham\OneDrive\Desktop\SUDO MUSIC\SUDO MUSIC\obj\Debug\SUDO MUSIC.exe
+C:\Users\maham\OneDrive\Desktop\SUDO MUSIC\SUDO MUSIC\obj\Debug\SUDO MUSIC.pdb
+C:\Users\maham\OneDrive\Desktop\SUDO MUSIC\SUDO MUSIC\obj\Debug\SUDO_MUSIC.FAILED.resources
+C:\Users\maham\OneDrive\Desktop\SUDO MUSIC\SUDO MUSIC\obj\Debug\SUDO_MUSIC.Success.resources
+C:\Users\maham\OneDrive\Desktop\SUDO MUSIC\SUDO MUSIC\obj\Debug\SUDO_MUSIC.Empty.resources
