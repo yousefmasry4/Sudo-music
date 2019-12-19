@@ -78,8 +78,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Success";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Success";
+            this.Text = "SUCCESS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Success_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

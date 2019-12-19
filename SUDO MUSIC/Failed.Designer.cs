@@ -78,6 +78,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FAILED";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAILED";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FAILED_FormClosing);
