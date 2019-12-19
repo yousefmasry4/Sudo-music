@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SUDO_MUSIC
@@ -20,6 +13,8 @@ namespace SUDO_MUSIC
             timer1.Start();
         }
 
+
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             _ticks++;
@@ -27,6 +22,7 @@ namespace SUDO_MUSIC
             {
                 this.Hide();
                 Form1 f4 = new Form1();
+                
                 f4.ShowDialog();
                 timer1.Stop();
             }
@@ -38,5 +34,7 @@ namespace SUDO_MUSIC
         {
             Application.Exit();
         }
+
+        
     }
 }

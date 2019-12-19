@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SUDO_MUSIC
@@ -29,6 +22,7 @@ namespace SUDO_MUSIC
             {
                 this.Hide();
                 Empty f3 = new Empty();
+                //f3.StartPosition = FormStartPosition.CenterScreen;// no need you can toggle this ability from property Startposition
                 f3.ShowDialog();
                 timer1.Stop();
             }

@@ -1,31 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
-
+using System.Windows.Threading;
 
 namespace SUDO_MUSIC
 {
-
-
+   
     public partial class Form1 : Form
     {
-        public string ip { set; get; }
         
+       public static string[] A = new string[15]; 
+    
+
+
+        int iamin = 0;
         public Form1()
         {
+         
             InitializeComponent();
+
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.BorderColor = TransparencyKey;
+
+
+
+
         }
-        
-        private void textBox1_TextChanged(object sender, EventArgs e)
+       
+        public void textBox1_TextChanged(object sender, EventArgs e)
         {
            
 
@@ -40,8 +48,10 @@ namespace SUDO_MUSIC
                 e.Handled = true;
 
             }
-            
+           
         }
+        
+        
         public static IPAddress GetDefaultGateway()
         {
             return NetworkInterface
@@ -56,42 +66,61 @@ namespace SUDO_MUSIC
                 .FirstOrDefault();
         }
 
-            private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            
+
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.BorderColor = TransparencyKey;
+
             var ip = GetDefaultGateway().ToString();
-            String[] input = { "192", "168", "1", "100" };
+            String[] input = textBox1.Text.Split('.');
             String[] strlist = ip.Split('.');
             int flag = 0;
-            for (int i=0; i<4; i++)
+
+            if (input.Length == 4)
             {
-                flag+=strlist[i] == input[i] ? 0 : 1;
+                for (int i = 0; i < 3; i++)
+                {
+
+                    flag += strlist[i] == input[i] ? 0 : 1;
+
+                }
                 
-            }
-            if(falg != 0)
-            {
-                //msh sa7
-            }
-            if (textBox1.Text == "0")
-            {
-                this.Hide();
-                FAILED f1 = new FAILED();
-                f1.ShowDialog();
-            }
-            else if (textBox1.Text == "1")
-            {
-                this.Hide();
-                Success f2 = new Success();
-                f2.ShowDialog();
+                if (flag == 1)
+                {
+                    this.Hide();
+                    FAILED f1 = new FAILED();
+                   
+                    f1.ShowDialog();
+                    
 
-            }
+                    flag = 0;
+                }
+                else if (flag == 0)
+                {
+                    this.Hide();
+                    Success f2 = new Success();
+                    
+                    f2.ShowDialog();
+                    
+                    
+                   
+                    flag = 0;
+                }
+            } 
             else
+                
 
-                MessageBox.Show("Enter a valid ip");
+            MessageBox.Show("Enter valid ip");
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
+
+        
     }
 }
