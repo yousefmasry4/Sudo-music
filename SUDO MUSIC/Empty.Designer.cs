@@ -58,7 +58,6 @@
             this.panelpicbox = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.PanelAccess = new System.Windows.Forms.Panel();
@@ -74,6 +73,7 @@
             this.trackBarMain = new System.Windows.Forms.TrackBar();
             this.trackBar5 = new System.Windows.Forms.TrackBar();
             this.label12 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -205,7 +205,6 @@
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.panelpicbox);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panelsettings);
             this.panel3.Location = new System.Drawing.Point(0, 142);
             this.panel3.Name = "panel3";
@@ -217,11 +216,11 @@
             this.panelsettings.BackColor = System.Drawing.Color.Transparent;
             this.panelsettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelsettings.BackgroundImage")));
             this.panelsettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelsettings.Controls.Add(this.WifiPanel);
             this.panelsettings.Controls.Add(this.Access);
             this.panelsettings.Controls.Add(this.Wifi);
             this.panelsettings.Controls.Add(this.Soundselector);
             this.panelsettings.Controls.Add(this.Panelsoundsettings);
-            this.panelsettings.Controls.Add(this.WifiPanel);
             this.panelsettings.Controls.Add(this.PanelAccess);
             this.panelsettings.ForeColor = System.Drawing.Color.White;
             this.panelsettings.Location = new System.Drawing.Point(12, 7);
@@ -249,7 +248,7 @@
             this.Submit2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Submit2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Submit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Submit2.Location = new System.Drawing.Point(83, 323);
+            this.Submit2.Location = new System.Drawing.Point(83, 331);
             this.Submit2.Name = "Submit2";
             this.Submit2.Size = new System.Drawing.Size(284, 69);
             this.Submit2.TabIndex = 4;
@@ -326,6 +325,7 @@
             this.Submit1.TabIndex = 4;
             this.Submit1.Text = "Submit";
             this.Submit1.UseVisualStyleBackColor = true;
+            this.Submit1.Click += new System.EventHandler(this.Submit1_Click);
             // 
             // trackBar1
             // 
@@ -366,6 +366,7 @@
             this.Access.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.Access.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Access.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Access.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Access.Location = new System.Drawing.Point(124, 321);
             this.Access.Name = "Access";
             this.Access.Size = new System.Drawing.Size(221, 71);
@@ -381,6 +382,7 @@
             this.Wifi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.Wifi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Wifi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Wifi.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Wifi.Location = new System.Drawing.Point(124, 206);
             this.Wifi.Name = "Wifi";
             this.Wifi.Size = new System.Drawing.Size(221, 71);
@@ -396,6 +398,7 @@
             this.Soundselector.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.Soundselector.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Soundselector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Soundselector.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Soundselector.Location = new System.Drawing.Point(124, 91);
             this.Soundselector.Name = "Soundselector";
             this.Soundselector.Size = new System.Drawing.Size(221, 71);
@@ -414,7 +417,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(978, 432);
@@ -425,7 +427,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-1, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1199, 507);
@@ -434,16 +435,9 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Silver;
-            this.panel4.Location = new System.Drawing.Point(631, 85);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1195, 10);
-            this.panel4.TabIndex = 3;
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.trackBarMain);
             this.panel2.Location = new System.Drawing.Point(0, 76);
             this.panel2.Name = "panel2";
@@ -512,7 +506,7 @@
             this.Submit3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Submit3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Submit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Submit3.Location = new System.Drawing.Point(128, 340);
+            this.Submit3.Location = new System.Drawing.Point(107, 345);
             this.Submit3.Name = "Submit3";
             this.Submit3.Size = new System.Drawing.Size(284, 69);
             this.Submit3.TabIndex = 4;
@@ -580,11 +574,29 @@
             this.label12.TabIndex = 10;
             this.label12.Text = "TRACKER 5";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.ImageKey = "(none)";
+            this.button3.Location = new System.Drawing.Point(563, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(84, 64);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Start";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Empty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1198, 655);
             this.Controls.Add(this.undersidepanel1);
@@ -604,6 +616,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Music";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Empty_FormClosing);
+            this.Load += new System.EventHandler(this.Empty_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -635,7 +648,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -677,5 +689,6 @@
         private System.Windows.Forms.TrackBar trackBarMain;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TrackBar trackBar5;
+        private System.Windows.Forms.Button button3;
     }
 }

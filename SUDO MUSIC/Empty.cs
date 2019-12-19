@@ -1,7 +1,10 @@
 ﻿using System;
-
+using System.Drawing;
+using System.Net;
 using System.Windows.Forms;
-
+using System.Drawing.Imaging;
+using ImageProcessor.Processors;
+using ImageProcessor.Imaging;
 
 namespace SUDO_MUSIC
 {
@@ -28,11 +31,22 @@ namespace SUDO_MUSIC
             Access.FlatStyle = FlatStyle.Flat;
             Access.FlatAppearance.BorderSize = 0;
             Access.FlatAppearance.BorderColor = TransparencyKey;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.BorderColor = TransparencyKey;
+            
         }
+        
+
+
+
+
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           
+            
+
         }
 
         private void Empty_FormClosing(object sender, FormClosingEventArgs e)
@@ -96,7 +110,26 @@ namespace SUDO_MUSIC
             PanelAccess.BringToFront();
 
         }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.BorderColor = TransparencyKey;
 
+            WebRequest request = WebRequest.Create("http://photographywith.com/wp-content/uploads/2018/01/hermes-rivera-255601-1024x592.jpg");
+            using (var response = request.GetResponse())
+            {
+                using (var str = response.GetResponseStream())
+                {
+                  pictureBox3.Image = Bitmap.FromStream(str);
+                    
+                    pictureBox1.Image = pictureBox3.Image;
+                }
+
+            }
+            
+
+        }
         private void SSID1_TextChanged(object sender, EventArgs e)
         {
 
@@ -119,7 +152,17 @@ namespace SUDO_MUSIC
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void Submit1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Empty_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }
