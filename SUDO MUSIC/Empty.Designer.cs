@@ -42,6 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -70,7 +71,6 @@
             this.label4.Size = new System.Drawing.Size(105, 24);
             this.label4.TabIndex = 4;
             this.label4.Text = "192.168.1.1";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -160,6 +160,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(0, 142);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1201, 510);
@@ -179,7 +180,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Silver;
-            this.panel4.Location = new System.Drawing.Point(2, 76);
+            this.panel4.Location = new System.Drawing.Point(631, 85);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1195, 10);
             this.panel4.TabIndex = 3;
@@ -191,6 +192,14 @@
             this.panel2.Size = new System.Drawing.Size(1198, 56);
             this.panel2.TabIndex = 4;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.DarkGray;
+            this.panel5.Location = new System.Drawing.Point(3, 81);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1192, 10);
+            this.panel5.TabIndex = 5;
+            // 
             // Empty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -199,8 +208,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1198, 655);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.undersidepanel1);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
@@ -238,5 +247,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel undersidepanel2;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel5;
     }
 }

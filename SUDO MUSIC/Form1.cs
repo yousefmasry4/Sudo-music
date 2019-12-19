@@ -14,11 +14,6 @@ namespace SUDO_MUSIC
     public partial class Form1 : Form
     {
         
-       public static string[] A = new string[15]; 
-    
-
-
-        int iamin = 0;
         public Form1()
         {
          
@@ -28,20 +23,24 @@ namespace SUDO_MUSIC
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.BorderColor = TransparencyKey;
 
-
+            
 
 
         }
        
         public void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
 
+
+            
 
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
+
+            
+
             char chr = e.KeyChar;
             if (!Char.IsDigit(chr) && chr != 8 && chr != 46)
             {
@@ -111,7 +110,9 @@ namespace SUDO_MUSIC
                 }
             } 
             else
-                
+                button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.BorderColor = TransparencyKey;
 
             MessageBox.Show("Enter valid ip");
         }
@@ -121,6 +122,6 @@ namespace SUDO_MUSIC
             Application.Exit();
         }
 
-        
+       
     }
 }

@@ -17,6 +17,7 @@ namespace SUDO_MUSIC
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.BorderColor = TransparencyKey;
             undersidepanel1.BringToFront();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -50,16 +51,5 @@ namespace SUDO_MUSIC
 
         }
 
-     
-
-        private void undersidepanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
