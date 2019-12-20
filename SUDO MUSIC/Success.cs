@@ -3,11 +3,14 @@ using System.Windows.Forms;
 
 namespace SUDO_MUSIC
 {
+    
     public partial class Success : Form
     {
+        public string s;
         private int _ticks;
-        public Success()
+        public Success(string s)
         {
+            this.s = s;
 
             InitializeComponent();
             
@@ -21,7 +24,7 @@ namespace SUDO_MUSIC
             if (_ticks == 1)
             {
                 this.Hide();
-                Empty f3 = new Empty();
+                Empty f3 = new Empty(s);
                 //f3.StartPosition = FormStartPosition.CenterScreen;// no need you can toggle this ability from property Startposition
                 f3.ShowDialog();
                 timer1.Stop();

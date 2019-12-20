@@ -19,9 +19,6 @@ namespace SUDO_MUSIC
          
             InitializeComponent();
 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.BorderColor = TransparencyKey;
 
             
 
@@ -69,9 +66,7 @@ namespace SUDO_MUSIC
         {
             
 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.BorderColor = TransparencyKey;
+          
 
             var ip = GetDefaultGateway().ToString();
             String[] input = textBox1.Text.Split('.');
@@ -86,35 +81,42 @@ namespace SUDO_MUSIC
                     flag += strlist[i] == input[i] ? 0 : 1;
 
                 }
-                
-                if (flag == 1)
+                if(flag==1||flag==0)
                 {
-                    this.Hide();
-                    FAILED f1 = new FAILED();
-                   
-                    f1.ShowDialog();
+                   // MessageBox.Show("Connecting..." );
                     
 
-                    flag = 0;
+                  if (flag == 1)
+                  {
+                        
+
+                        this.Hide();
+                        FAILED f1 = new FAILED();
+
+                        f1.ShowDialog();
+
+
+                        flag = 0;
+                  }
+
+                    else if (flag == 0)
+                    {
+                        
+                        this.Hide();
+                        Success f2 = new Success(textBox1.Text);
+
+                        f2.ShowDialog();
+
+
+
+                        flag = 0;
+                    }
                 }
-                else if (flag == 0)
-                {
-                    this.Hide();
-                    Success f2 = new Success();
-                    
-                    f2.ShowDialog();
-                    
-                    
-                   
-                    flag = 0;
-                }
-            } 
+            
+            }  
+            
             else
-                button1.FlatStyle = FlatStyle.Flat;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.BorderColor = TransparencyKey;
-
-            MessageBox.Show("Enter valid ip");
+                MessageBox.Show("Enter valid ip");
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

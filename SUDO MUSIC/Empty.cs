@@ -10,38 +10,39 @@ namespace SUDO_MUSIC
 {
     public partial class Empty : Form
     {
-        public Empty()
+        public string s;
+        public Empty(string s)
         {
+            this.s = s;
             InitializeComponent();
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.BorderColor = TransparencyKey;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.BorderColor = TransparencyKey;
+            
+
             undersidepanel1.BringToFront();
             panelpicbox.BringToFront();
             panelsettings.SendToBack();
-            Soundselector.FlatStyle = FlatStyle.Flat;
-            Soundselector.FlatAppearance.BorderSize = 0;
-            Soundselector.FlatAppearance.BorderColor = TransparencyKey;
-            Wifi.FlatStyle = FlatStyle.Flat;
-            Wifi.FlatAppearance.BorderSize = 0;
-            Wifi.FlatAppearance.BorderColor = TransparencyKey;
-            Access.FlatStyle = FlatStyle.Flat;
-            Access.FlatAppearance.BorderSize = 0;
-            Access.FlatAppearance.BorderColor = TransparencyKey;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.BorderColor = TransparencyKey;
+            panel1.BackColor = Color.FromArgb(65, Color.Black);
+            panel5.BackColor = Color.FromArgb(0, Color.Black);
+            panel2.BackColor = Color.FromArgb(65, Color.Black);
+            PanelAccess.BackColor = Color.FromArgb(100, Color.Black);
+            Panelsoundsettings.BackColor = Color.FromArgb(100, Color.Black);
+            WifiPanel.BackColor = Color.FromArgb(100, Color.Black);
+            WebRequest request = WebRequest.Create("https://i1.sndcdn.com/artworks-000095590419-kwlwvt-t500x500.jpg");
+            using (var response = request.GetResponse())
+            {
+                using (var str = response.GetResponseStream())
+                {
+                    pictureBox3.Image = Bitmap.FromStream(str);
+
+                }
+
+            }
+           
             
+            label4.Text = s;
+            label4.Refresh();
+            label4.Update();
+
         }
-        
-
-
-
-
-
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -57,79 +58,68 @@ namespace SUDO_MUSIC
         private void button1_Click(object sender, EventArgs e)
         {
             undersidepanel1.Width = button1.Width;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.BorderColor = TransparencyKey;
-            undersidepanel2.SendToBack();
-            undersidepanel1.BringToFront();
-            panelpicbox.BringToFront();
-            panelsettings.SendToBack();
+
+            panelsettings.SendToBack(); undersidepanel2.SendToBack();
+            panelpicbox.BringToFront(); undersidepanel1.BringToFront();
+
+
+
+            WebRequest request = WebRequest.Create("https://i1.sndcdn.com/artworks-000095590419-kwlwvt-t500x500.jpg");
+            using (var response = request.GetResponse())
+            {
+                using (var str = response.GetResponseStream())
+                {
+                    pictureBox3.Image = Bitmap.FromStream(str);
+
+                    
+                }
+
+            }
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             undersidepanel1.Width = button2.Width;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.BorderColor = TransparencyKey;
+           
             undersidepanel1.SendToBack();
             undersidepanel2.BringToFront();
             panelpicbox.SendToBack();
             panelsettings.BringToFront();
-            
+
         }
 
         private void Soundselector_Click(object sender, EventArgs e)
         {
-            Soundselector.FlatStyle = FlatStyle.Flat;
-            Soundselector.FlatAppearance.BorderSize = 0;
-            Soundselector.FlatAppearance.BorderColor = TransparencyKey;
-            WifiPanel.SendToBack();
-            PanelAccess.SendToBack();
-            Panelsoundsettings.BringToFront();
-            
+            panel4.Height = Soundselector.Height;
+            panel4.Top = Soundselector.Top;
+            WifiPanel.SendToBack(); PanelAccess.SendToBack(); Panelsoundsettings.BringToFront();
+
         }
 
         private void Wifi_Click(object sender, EventArgs e)
         {
-            Wifi.FlatStyle = FlatStyle.Flat;
-            Wifi.FlatAppearance.BorderSize = 0;
-            Wifi.FlatAppearance.BorderColor = TransparencyKey;
-            PanelAccess.SendToBack();
+            panel4.Height = Wifi.Height;
+            panel4.Top = Wifi.Top;
+
             Panelsoundsettings.SendToBack();
+            PanelAccess.SendToBack(); 
             WifiPanel.BringToFront();
+
+
         }
 
         private void Access_Click(object sender, EventArgs e)
         {
-            Access.FlatStyle = FlatStyle.Flat;
-            Access.FlatAppearance.BorderSize = 0;
-            Access.FlatAppearance.BorderColor = TransparencyKey;
-            Panelsoundsettings.SendToBack();
-            WifiPanel.SendToBack();
-            PanelAccess.BringToFront();
+            panel4.Height = Access.Height;
+            panel4.Top = Access.Top;
+            Panelsoundsettings.SendToBack(); WifiPanel.SendToBack(); PanelAccess.BringToFront();
+
+
 
         }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.BorderColor = TransparencyKey;
 
-            WebRequest request = WebRequest.Create("http://photographywith.com/wp-content/uploads/2018/01/hermes-rivera-255601-1024x592.jpg");
-            using (var response = request.GetResponse())
-            {
-                using (var str = response.GetResponseStream())
-                {
-                  pictureBox3.Image = Bitmap.FromStream(str);
-                    
-                    pictureBox1.Image = pictureBox3.Image;
-                }
-
-            }
-            
-
-        }
         private void SSID1_TextChanged(object sender, EventArgs e)
         {
 
@@ -152,7 +142,7 @@ namespace SUDO_MUSIC
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Submit1_Click(object sender, EventArgs e)
@@ -162,7 +152,43 @@ namespace SUDO_MUSIC
 
         private void Empty_Load(object sender, EventArgs e)
         {
+
+        }
+
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelpicbox_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
            
+            DialogResult dialogResult = MessageBox.Show("Confirm", "Logging Out?", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Hide();
+                Form1 f6 = new Form1();
+                f6.ShowDialog();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+
+
         }
     }
 }
