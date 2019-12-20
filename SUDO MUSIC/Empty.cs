@@ -20,12 +20,16 @@ namespace SUDO_MUSIC
             undersidepanel1.BringToFront();
             panelpicbox.BringToFront();
             panelsettings.SendToBack();
-            panel1.BackColor = Color.FromArgb(65, Color.Black);
+            panel1.BackColor = Color.FromArgb(100, Color.Black);
             panel5.BackColor = Color.FromArgb(0, Color.Black);
-            panel2.BackColor = Color.FromArgb(65, Color.Black);
+            panel2.BackColor = Color.FromArgb(100, Color.Black);
             PanelAccess.BackColor = Color.FromArgb(100, Color.Black);
             Panelsoundsettings.BackColor = Color.FromArgb(100, Color.Black);
             WifiPanel.BackColor = Color.FromArgb(100, Color.Black);
+          
+
+
+
             WebRequest request = WebRequest.Create("https://i1.sndcdn.com/artworks-000095590419-kwlwvt-t500x500.jpg");
             using (var response = request.GetResponse())
             {
@@ -188,6 +192,11 @@ namespace SUDO_MUSIC
                 //do something else
             }
 
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
 
         }
     }

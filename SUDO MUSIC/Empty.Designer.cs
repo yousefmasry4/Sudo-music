@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empty));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelsettings = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.Access = new System.Windows.Forms.Button();
             this.Wifi = new System.Windows.Forms.Button();
             this.Soundselector = new System.Windows.Forms.Button();
@@ -58,23 +60,21 @@
             this.trackBar4 = new System.Windows.Forms.TrackBar();
             this.trackBar3 = new System.Windows.Forms.TrackBar();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.PanelAccess = new System.Windows.Forms.Panel();
-            this.Submit3 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.PASS2 = new System.Windows.Forms.TextBox();
-            this.SSID2 = new System.Windows.Forms.TextBox();
             this.WifiPanel = new System.Windows.Forms.Panel();
             this.Submit2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PASS1 = new System.Windows.Forms.TextBox();
             this.SSID1 = new System.Windows.Forms.TextBox();
+            this.PanelAccess = new System.Windows.Forms.Panel();
+            this.Submit3 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.PASS2 = new System.Windows.Forms.TextBox();
+            this.SSID2 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.trackBarMain = new System.Windows.Forms.TrackBar();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -88,8 +88,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
-            this.PanelAccess.SuspendLayout();
             this.WifiPanel.SuspendLayout();
+            this.PanelAccess.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarMain)).BeginInit();
             this.SuspendLayout();
@@ -108,6 +108,20 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(1128, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(58, 55);
+            this.button3.TabIndex = 11;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -122,6 +136,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Green;
             this.label3.Location = new System.Drawing.Point(746, 18);
@@ -129,10 +144,12 @@
             this.label3.Size = new System.Drawing.Size(147, 28);
             this.label3.TabIndex = 3;
             this.label3.Text = "Connected to :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Broadway", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(181, 18);
@@ -143,6 +160,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(56, -34);
             this.pictureBox2.Name = "pictureBox2";
@@ -171,7 +189,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -189,7 +207,7 @@
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Schoolbook", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,9 +223,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.panelsettings);
             this.panel3.Controls.Add(this.panelpicbox);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.panelsettings);
             this.panel3.Location = new System.Drawing.Point(0, 150);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1201, 502);
@@ -216,16 +234,16 @@
             // panelpicbox
             // 
             this.panelpicbox.Controls.Add(this.pictureBox3);
-            this.panelpicbox.Location = new System.Drawing.Point(267, 80);
+            this.panelpicbox.Location = new System.Drawing.Point(101, 22);
             this.panelpicbox.Name = "panelpicbox";
-            this.panelpicbox.Size = new System.Drawing.Size(660, 353);
+            this.panelpicbox.Size = new System.Drawing.Size(985, 457);
             this.panelpicbox.TabIndex = 4;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(660, 352);
+            this.pictureBox3.Size = new System.Drawing.Size(982, 457);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -259,6 +277,15 @@
             this.panelsettings.Name = "panelsettings";
             this.panelsettings.Size = new System.Drawing.Size(1174, 490);
             this.panelsettings.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Green;
+            this.panel4.Location = new System.Drawing.Point(3, 92);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 76);
+            this.panel4.TabIndex = 10;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // Access
             // 
@@ -433,72 +460,6 @@
             this.trackBar2.Size = new System.Drawing.Size(311, 56);
             this.trackBar2.TabIndex = 2;
             // 
-            // PanelAccess
-            // 
-            this.PanelAccess.Controls.Add(this.Submit3);
-            this.PanelAccess.Controls.Add(this.label7);
-            this.PanelAccess.Controls.Add(this.label6);
-            this.PanelAccess.Controls.Add(this.PASS2);
-            this.PanelAccess.Controls.Add(this.SSID2);
-            this.PanelAccess.Location = new System.Drawing.Point(658, 55);
-            this.PanelAccess.Name = "PanelAccess";
-            this.PanelAccess.Size = new System.Drawing.Size(449, 395);
-            this.PanelAccess.TabIndex = 9;
-            // 
-            // Submit3
-            // 
-            this.Submit3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Submit3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Submit3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Submit3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.Submit3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Submit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Submit3.Location = new System.Drawing.Point(81, 323);
-            this.Submit3.Name = "Submit3";
-            this.Submit3.Size = new System.Drawing.Size(284, 69);
-            this.Submit3.TabIndex = 4;
-            this.Submit3.Text = "Submit";
-            this.Submit3.UseVisualStyleBackColor = false;
-            this.Submit3.Click += new System.EventHandler(this.Submit3_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(51, 125);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 18);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Pass";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(18, 70);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 18);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Access SSID";
-            // 
-            // PASS2
-            // 
-            this.PASS2.Location = new System.Drawing.Point(134, 121);
-            this.PASS2.Name = "PASS2";
-            this.PASS2.PasswordChar = '*';
-            this.PASS2.Size = new System.Drawing.Size(284, 22);
-            this.PASS2.TabIndex = 1;
-            // 
-            // SSID2
-            // 
-            this.SSID2.Location = new System.Drawing.Point(134, 69);
-            this.SSID2.Name = "SSID2";
-            this.SSID2.Size = new System.Drawing.Size(284, 22);
-            this.SSID2.TabIndex = 0;
-            // 
             // WifiPanel
             // 
             this.WifiPanel.BackColor = System.Drawing.Color.Transparent;
@@ -567,6 +528,72 @@
             this.SSID1.TabIndex = 0;
             this.SSID1.TextChanged += new System.EventHandler(this.SSID1_TextChanged);
             // 
+            // PanelAccess
+            // 
+            this.PanelAccess.Controls.Add(this.Submit3);
+            this.PanelAccess.Controls.Add(this.label7);
+            this.PanelAccess.Controls.Add(this.label6);
+            this.PanelAccess.Controls.Add(this.PASS2);
+            this.PanelAccess.Controls.Add(this.SSID2);
+            this.PanelAccess.Location = new System.Drawing.Point(658, 55);
+            this.PanelAccess.Name = "PanelAccess";
+            this.PanelAccess.Size = new System.Drawing.Size(449, 395);
+            this.PanelAccess.TabIndex = 9;
+            // 
+            // Submit3
+            // 
+            this.Submit3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Submit3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Submit3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Submit3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.Submit3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Submit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Submit3.Location = new System.Drawing.Point(81, 323);
+            this.Submit3.Name = "Submit3";
+            this.Submit3.Size = new System.Drawing.Size(284, 69);
+            this.Submit3.TabIndex = 4;
+            this.Submit3.Text = "Submit";
+            this.Submit3.UseVisualStyleBackColor = false;
+            this.Submit3.Click += new System.EventHandler(this.Submit3_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(51, 125);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 18);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Pass";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(18, 70);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 18);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Access SSID";
+            // 
+            // PASS2
+            // 
+            this.PASS2.Location = new System.Drawing.Point(134, 121);
+            this.PASS2.Name = "PASS2";
+            this.PASS2.PasswordChar = '*';
+            this.PASS2.Size = new System.Drawing.Size(284, 22);
+            this.PASS2.TabIndex = 1;
+            // 
+            // SSID2
+            // 
+            this.SSID2.Location = new System.Drawing.Point(134, 69);
+            this.SSID2.Name = "SSID2";
+            this.SSID2.Size = new System.Drawing.Size(284, 22);
+            this.SSID2.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
@@ -591,29 +618,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1199, 11);
             this.panel5.TabIndex = 5;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Green;
-            this.panel4.Location = new System.Drawing.Point(3, 92);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 76);
-            this.panel4.TabIndex = 10;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Green;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(1128, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(58, 55);
-            this.button3.TabIndex = 11;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Empty
             // 
@@ -656,10 +660,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
-            this.PanelAccess.ResumeLayout(false);
-            this.PanelAccess.PerformLayout();
             this.WifiPanel.ResumeLayout(false);
             this.WifiPanel.PerformLayout();
+            this.PanelAccess.ResumeLayout(false);
+            this.PanelAccess.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarMain)).EndInit();
