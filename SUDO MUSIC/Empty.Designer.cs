@@ -75,6 +75,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.trackBarMain = new System.Windows.Forms.TrackBar();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -223,9 +225,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.panelsettings);
             this.panel3.Controls.Add(this.panelpicbox);
             this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.panelsettings);
             this.panel3.Location = new System.Drawing.Point(0, 150);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1201, 502);
@@ -233,6 +235,8 @@
             // 
             // panelpicbox
             // 
+            this.panelpicbox.Controls.Add(this.label14);
+            this.panelpicbox.Controls.Add(this.label13);
             this.panelpicbox.Controls.Add(this.pictureBox3);
             this.panelpicbox.Location = new System.Drawing.Point(101, 22);
             this.panelpicbox.Name = "panelpicbox";
@@ -619,6 +623,26 @@
             this.panel5.Size = new System.Drawing.Size(1199, 11);
             this.panel5.TabIndex = 5;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(30, 28);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(112, 17);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "2SM EL2O8NYA";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(27, 74);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(120, 17);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "2SM ELNEGOOM";
+            // 
             // Empty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -650,6 +674,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panelpicbox.ResumeLayout(false);
+            this.panelpicbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelsettings.ResumeLayout(false);
@@ -719,5 +744,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }
