@@ -75,8 +75,9 @@ namespace SUDO_MUSIC
                 }
 
             }
-            catch
+            catch(Exception e)
             {
+                MessageBox.Show($"{e}   {url}");
                 return HttpStatusCode.BadRequest;
             }
           }
@@ -138,7 +139,8 @@ namespace SUDO_MUSIC
                     flag += strlist[i] == input[i] ? 0 : 1;
 
                 }
-                HttpStatusCode xx = await myfuckingfuction($"https://{textBox1.Text}/");
+                //http://192.168.43.100/
+                HttpStatusCode xx = await myfuckingfuction($"http://{textBox1.Text}/");
                 if (xx == HttpStatusCode.OK && (flag == 1 || flag == 0))
                 {
                     // MessageBox.Show("Connecting..." );

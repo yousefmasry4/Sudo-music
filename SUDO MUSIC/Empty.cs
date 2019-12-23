@@ -5,13 +5,58 @@ using System.Windows.Forms;
 using System.Drawing.Imaging;
 using ImageProcessor.Processors;
 using ImageProcessor.Imaging;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text;
+using System.Threading;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Threading.Tasks;
+
 
 namespace SUDO_MUSIC
 {
+
+    
     public partial class Empty : Form
     {
         public string s;
-        public Empty(string s)
+        public JObject dataall;
+        public Dictionary<string, string> xvalues;
+
+        private async void  dataget()
+        {
+            MessageBox.Show($"sadsd");
+            var url = $"http://{s}/icy";
+            using var client = new HttpClient();
+            while (true)
+            {
+
+                var response = await client.PostAsync(url,null);
+
+                string result = response.Content.ReadAsStringAsync().Result;
+
+                String jsonx = JsonConvert.SerializeObject(result);        
+              //  MessageBox.Show($"{jsonx}");
+                var values = JsonConvert.DeserializeObject<Dictionary<string, string>>(result);
+                if (values != xvalues)
+                {
+                    label14.Text = values["meta"];
+                
+                }
+                else
+                {
+                    xvalues = values;
+                }
+                //  JavaScriptSerializer js = new JavaScriptSerializer();
+                // var persons = js.Deserialize<dynamic,dynamic>(jsonx); // Person [] persons =  js.Deserialize<Person[dynamic,dynamic]>(json);
+                //   MessageBox.Show($"{values["curst"]}");
+
+                Thread.Sleep(8000);
+            }
+        }
+
+        public  Empty(string s) 
         {
             this.s = s;
             InitializeComponent();
@@ -26,9 +71,6 @@ namespace SUDO_MUSIC
             PanelAccess.BackColor = Color.FromArgb(100, Color.Black);
             Panelsoundsettings.BackColor = Color.FromArgb(100, Color.Black);
             WifiPanel.BackColor = Color.FromArgb(100, Color.Black);
-          
-
-
 
             WebRequest request = WebRequest.Create("https://i1.sndcdn.com/artworks-000095590419-kwlwvt-t500x500.jpg");
             using (var response = request.GetResponse())
@@ -45,8 +87,10 @@ namespace SUDO_MUSIC
             label4.Text = s;
             label4.Refresh();
             label4.Update();
+            dataget();
 
         }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -59,14 +103,12 @@ namespace SUDO_MUSIC
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private  void button1_Click(object sender, EventArgs e)
         {
             undersidepanel1.Width = button1.Width;
 
             panelsettings.SendToBack(); undersidepanel2.SendToBack();
             panelpicbox.BringToFront(); undersidepanel1.BringToFront();
-
-
 
             WebRequest request = WebRequest.Create("https://i1.sndcdn.com/artworks-000095590419-kwlwvt-t500x500.jpg");
             using (var response = request.GetResponse())
@@ -196,6 +238,11 @@ namespace SUDO_MUSIC
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
         {
 
         }
