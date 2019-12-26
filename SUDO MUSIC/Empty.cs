@@ -39,20 +39,28 @@ namespace SUDO_MUSIC
                 String jsonx = JsonConvert.SerializeObject(result);        
               //  MessageBox.Show($"{jsonx}");
                 var values = JsonConvert.DeserializeObject<Dictionary<string, string>>(result);
-                if (values != xvalues)
+                try
+                {
+                    if (values["meta"] != xvalues["meta"])
+                    {
+                        label14.Text = values["meta"];
+
+                    }
+                    else
+                    {
+                        xvalues = values;
+                    }
+                }
+                catch
                 {
                     label14.Text = values["meta"];
-                
-                }
-                else
-                {
-                    xvalues = values;
+
                 }
                 //  JavaScriptSerializer js = new JavaScriptSerializer();
                 // var persons = js.Deserialize<dynamic,dynamic>(jsonx); // Person [] persons =  js.Deserialize<Person[dynamic,dynamic]>(json);
                 //   MessageBox.Show($"{values["curst"]}");
 
-                Thread.Sleep(8000);
+                await Task.Delay(8000);
             }
         }
 
