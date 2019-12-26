@@ -21,7 +21,7 @@ namespace SUDO_MUSIC
     public partial class Empty : Form
     {
     
-        public string s;
+        public string s,c= "https://steamuserimages-a.akamaihd.net/ugc/956353893724749105/F5891C490EEE95F62C8CC60B7315EA7DA1258966/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true";
         public JObject dataall;
         public Dictionary<string, string> xvalues;
 
@@ -32,7 +32,7 @@ namespace SUDO_MUSIC
             using var client = new HttpClient();
             while (true)
             {
-
+                /*
                 var response = await client.PostAsync(url, null);
 
                 string result = response.Content.ReadAsStringAsync().Result;
@@ -40,7 +40,7 @@ namespace SUDO_MUSIC
                 String jsonx = JsonConvert.SerializeObject(result);
                   MessageBox.Show($"{jsonx}");
                 var values = JsonConvert.DeserializeObject<Dictionary<string, string>>(result);
-
+                */
                 string html = string.Empty;
                 string url2 = @"https://scraper2.onlineradiobox.com/eg.radioeltekia?l=0";
 
@@ -57,29 +57,45 @@ namespace SUDO_MUSIC
                 MessageBox.Show(html);
                 String json0x = JsonConvert.SerializeObject(html);
                 var values2 = JsonConvert.DeserializeObject<Dictionary<string, string>>(html);
-                label14.Text = values2["title"]};
-
-                try
-                {
-                    if (values["meta"] != xvalues["meta"])
-                    {
-                        label14.Text = values["meta"];
-
-                    }
-                    else
-                    {
-                        xvalues = values;
-                    }
-                }
-                catch
-                {
-                    label14.Text = values["meta"];
-
-                }
+                label14.Text = values2["title"];
                 //  JavaScriptSerializer js = new JavaScriptSerializer();
                 // var persons = js.Deserialize<dynamic,dynamic>(jsonx); // Person [] persons =  js.Deserialize<Person[dynamic,dynamic]>(json);
                 //   MessageBox.Show($"{values["curst"]}");
+                //https://api-v2.soundcloud.com/search?q=%D9%81%D9%8A%D9%84%D9%88&sc_a_id=6cd98100d8f6b12b0663a2f5d724eff7787bbda7&variant_ids=&facet=model&user_id=780962-98040-16331-893890&client_id=FnJDg9sbLbDFKFL01ySCYBqcwZeRDxZj&limit=20&offset=0&linked_partitioning=1&app_version=1576575024&app_locale=en&fbclid=IwAR0GLU7CDjC6WVwmZDjnH5Sr0W_zTBy4Tpran_ysOIwr4JtvSC9sJYoBgbM
 
+                string html2 = string.Empty;
+                String url22 = String.Format(@"https://api-v2.soundcloud.com/search?q={0}&sc_a_id=6cd98100d8f6b12b0663a2f5d724eff7787bbda7&variant_ids=&facet=model&user_id=780962-98040-16331-893890&client_id=FnJDg9sbLbDFKFL01ySCYBqcwZeRDxZj&limit=20&offset=0&linked_partitioning=1&app_version=1576575024&app_locale=en&fbclid=IwAR0GLU7CDjC6WVwmZDjnH5Sr0W_zTBy4Tpran_ysOIwr4JtvSC9sJYoBgbM", values2["title"]);
+                MessageBox.Show(url22);
+
+                HttpWebRequest request22 = (HttpWebRequest)WebRequest.Create(url22);
+                request22.AutomaticDecompression = DecompressionMethods.GZip;
+
+                using (HttpWebResponse response22 = (HttpWebResponse)request22.GetResponse())
+                using (Stream stream23 = response22.GetResponseStream())
+                using (StreamReader reader22 = new StreamReader(stream23))
+                {
+                    html2 = reader22.ReadToEnd();
+                }
+
+                String json0x2 = JsonConvert.SerializeObject(html2);
+                var values22 = JsonConvert.DeserializeObject<Dictionary<String, dynamic>>(html2);
+                var a = values22["collection"];
+                var b = a[0];
+                c =b["artwork_url"];
+                c = c.Replace("large", "t500x500");
+                WebRequest request = WebRequest.Create(c);
+                using (var response = request.GetResponse())
+                {
+                    using (var str = response.GetResponseStream())
+                    {
+                        pictureBox3.Image = Bitmap.FromStream(str);
+
+
+                    }
+
+                }
+                pictureBox3.Update();
+                pictureBox3.Refresh();
                 await Task.Delay(8000);
             }
         }
@@ -100,12 +116,14 @@ namespace SUDO_MUSIC
             Panelsoundsettings.BackColor = Color.FromArgb(100, Color.Black);
             WifiPanel.BackColor = Color.FromArgb(100, Color.Black);
 
-            WebRequest request = WebRequest.Create("https://i1.sndcdn.com/artworks-000095590419-kwlwvt-t500x500.jpg");
+            WebRequest request = WebRequest.Create(c);
             using (var response = request.GetResponse())
             {
                 using (var str = response.GetResponseStream())
                 {
                     pictureBox3.Image = Bitmap.FromStream(str);
+                    pictureBox3.Update();
+                    pictureBox3.Refresh();
 
                 }
 
@@ -138,7 +156,7 @@ namespace SUDO_MUSIC
             panelsettings.SendToBack(); undersidepanel2.SendToBack();
             panelpicbox.BringToFront(); undersidepanel1.BringToFront();
 
-            WebRequest request = WebRequest.Create("https://i1.sndcdn.com/artworks-000095590419-kwlwvt-t500x500.jpg");
+            WebRequest request = WebRequest.Create(c);
             using (var response = request.GetResponse())
             {
                 using (var str = response.GetResponseStream())
