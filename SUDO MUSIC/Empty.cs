@@ -12,14 +12,15 @@ using System.Threading;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
-
+using System.IO;
+using System.Net.Http.Headers;
 
 namespace SUDO_MUSIC
 {
 
-    
     public partial class Empty : Form
     {
+    
         public string s;
         public JObject dataall;
         public Dictionary<string, string> xvalues;
@@ -32,13 +33,32 @@ namespace SUDO_MUSIC
             while (true)
             {
 
-                var response = await client.PostAsync(url,null);
+                var response = await client.PostAsync(url, null);
 
                 string result = response.Content.ReadAsStringAsync().Result;
 
-                String jsonx = JsonConvert.SerializeObject(result);        
-              //  MessageBox.Show($"{jsonx}");
+                String jsonx = JsonConvert.SerializeObject(result);
+                  MessageBox.Show($"{jsonx}");
                 var values = JsonConvert.DeserializeObject<Dictionary<string, string>>(result);
+
+                string html = string.Empty;
+                string url2 = @"https://scraper2.onlineradiobox.com/eg.radioeltekia?l=0";
+
+                HttpWebRequest request2 = (HttpWebRequest)WebRequest.Create(url2);
+                request2.AutomaticDecompression = DecompressionMethods.GZip;
+
+                using (HttpWebResponse response2 = (HttpWebResponse)request2.GetResponse())
+                using (Stream stream = response2.GetResponseStream())
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    html = reader.ReadToEnd();
+                }
+
+                MessageBox.Show(html);
+                String json0x = JsonConvert.SerializeObject(html);
+                var values2 = JsonConvert.DeserializeObject<Dictionary<string, string>>(html);
+                label14.Text = values2["title"]};
+
                 try
                 {
                     if (values["meta"] != xvalues["meta"])
