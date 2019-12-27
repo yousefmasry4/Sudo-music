@@ -29,35 +29,7 @@ namespace SUDO_MUSIC
 
         }
 
-        /*public async Task<string> GetEmpAsync()
-          {
-          HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new System.Uri("http://sdw2629/empservice/EmployeeInfo.svc/Employee"));
-          request.Method = "GET";
-          -->request.ContentType = "application/json; charset=utf-8"; //no need content??
-          var response = await request.GetResponseAsync();
-          using (StreamReader httpwebStreamReader = new StreamReader(response.GetResponseStream()))
-          {
-          string results = await httpwebStreamReader.ReadToEndAsync();
-          execute UI stuff on UI thread.
-                return results;
-          }
-
-          }*/
-
-        //-----------------------------------------------------------------------------------------------------------
-
-        /* protected void Page_Load(object sender, EventArgs e)
-         {
-             // Show success or failure of page load.
-             if (Response != 200)
-             {
-                 Response.Write("There was a problem accessing the web resource" +
-                     "<br />" + Response.StatusDescription);
-             }
-         }*/
-
-        // --------------------------------------------------------------------------------------------------------------
-
+        
         async static  Task<HttpStatusCode> myfuckingfuction(String url)
            {
 
@@ -115,16 +87,12 @@ namespace SUDO_MUSIC
                 // .Where(a => Array.FindIndex(a.GetAddressBytes(), b => b != 0) >= 0)
                 .FirstOrDefault();
         }
-         //public System.Net.NetworkInformation.PingCompletedEventHandler PingCompleted;
+         
         private async void button1_Click(object sender, EventArgs e)
         {
             button1.Hide();
             label1.Show();
-            /*string IP = this.textBox1.Text;
-           Ping ping = new Ping();
-           int timeout = 1000;
-           PingReply pingresult1 = ping.Send(IP,timeout);
-           */
+           
 
             var ip = GetDefaultGateway().ToString();
             String[] input = textBox1.Text.Split('.');
@@ -144,7 +112,7 @@ namespace SUDO_MUSIC
                 if (xx == HttpStatusCode.OK && (flag == 1 || flag == 0))
                 {
                     // MessageBox.Show("Connecting..." );
-                    MessageBox.Show(string.Format("{0}", xx));
+                  //  MessageBox.Show(string.Format("{0}", xx));
 
 
                     if (flag == 1)
