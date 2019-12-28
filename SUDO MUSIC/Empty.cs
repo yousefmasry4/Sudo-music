@@ -233,6 +233,8 @@ namespace SUDO_MUSIC
             dict.Add("spacial", $"{arr[4]}&");
 
             goAsync($"http://{s}/sound", dict);
+            Thread.Sleep(1500);
+
         }
 
         private void Empty_Load(object sender, EventArgs e)
@@ -289,7 +291,7 @@ namespace SUDO_MUSIC
             var dict = new Dictionary<string, string>();
             dict.Add("vol", $"{xv}$");
             goAsync($"http://{s}/soundvol", dict);
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
 
         }
 
