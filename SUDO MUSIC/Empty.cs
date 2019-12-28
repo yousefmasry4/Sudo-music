@@ -258,26 +258,10 @@ namespace SUDO_MUSIC
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
+       
 
 
-            DialogResult dialogResult = MessageBox.Show("Confirm", "Logging Out?", MessageBoxButtons.YesNo);
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                this.Hide();
-                anafeen = 0;
-                Form1 f6 = new Form1();
-                f6.ShowDialog();
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
-            }
-
-
-        }
+        
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -325,15 +309,16 @@ namespace SUDO_MUSIC
             arr[4] = $"{trackBar5.Value}";
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+      
+
+        private void button4_Click(object sender, EventArgs e)
         {
             var dict = new Dictionary<string, string>();
             dict.Add("id", $"1$");
             goAsync($"http://{s}/play", dict);
             Thread.Sleep(2000);
-            button3.Visible = false;
+            button4.Visible = false;
             dataget();
-
         }
 
         private void label14_Click(object sender, EventArgs e)

@@ -40,7 +40,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelpicbox = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -211,7 +211,7 @@
             // 
             // panelpicbox
             // 
-            this.panelpicbox.Controls.Add(this.button3);
+            this.panelpicbox.Controls.Add(this.button4);
             this.panelpicbox.Controls.Add(this.label14);
             this.panelpicbox.Controls.Add(this.pictureBox3);
             this.panelpicbox.Location = new System.Drawing.Point(101, 22);
@@ -220,22 +220,22 @@
             this.panelpicbox.Size = new System.Drawing.Size(985, 457);
             this.panelpicbox.TabIndex = 4;
             // 
-            // button3
+            // button4
             // 
-            this.button3.BackColor = System.Drawing.Color.Green;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(363, 178);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(274, 80);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "START";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.button4.BackColor = System.Drawing.Color.Green;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(363, 178);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(274, 80);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "START";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label14
             // 
@@ -506,10 +506,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1197, 655);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.undersidepanel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.undersidepanel2);
@@ -583,6 +583,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
