@@ -7,6 +7,7 @@
  *KA RADIO* is a WiFi shoutcast player based on ESP8266 and VS1053b chips, For more info and Guide Refer To: [INFO](https://github.com/karawin/Ka-Radio#-esp8266--vs1053-wifi-webradio-) , Thanks Karawin.
 
 ## Node MCU
+  ![alt text](https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/80251516_2621205841330511_6699462169244729344_n.jpg?_nc_cat=105&_nc_ohc=uFOsP2s9jK0AQmHM0jkxMvi-qLQ7fXN3OiQDbq8mvWzBicXbuvqQd-AVg&_nc_ht=scontent-hbe1-1.xx&oh=3a320e249c1b484435839e20af7434a6&oe=5E6EF285)
 using **Node MCU** based on **KA RADIO** it takes the data from internet then processe it using a decoder.
 
 What is *Node MCU* ...?
@@ -54,7 +55,7 @@ What is *Node MCU* ...?
  The FM transmitter turns the Sound to FM signal at the range of 100-150 meter.
  
  ## Radio reciever
- 
+  ![alt text](https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/80672858_531189950826696_2446395637881634816_n.jpg?_nc_cat=111&_nc_ohc=nISoLv8fruQAQm_nTI1v8iEQNzcYxEcufIfb2tyi6nrQ_VZV7bwijzKyg&_nc_ht=scontent-hbe1-1.xx&oh=99ce6883549416dbb8135fe1780730a8&oe=5E9B4C6A)
  >This project includes Radio reciever....duh!
  
  Simply what it does--> Using the Radio reciever module, gives the arduino the ability to recieve radio signal and Convert it to SOUND.
@@ -66,6 +67,7 @@ What is *Node MCU* ...?
  >It includes 2 Remotes (FR & IR)
  
  ### Remote (FR)
+  ![alt text](https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/79911672_552752855308852_8621852598510551040_n.jpg?_nc_cat=106&_nc_ohc=46k2VBXABEIAQli6xOLgoYOYDYOgeduSYPBuAF1rTCUJr9U2OPOpbSvXw&_nc_ht=scontent-hbe1-1.xx&oh=4a00ab05c36ea84d2bae5c2c237792fa&oe=5EA9B001)
  
  >Remote FR in the most Simplest Explanation --> controls radio channel :)
  
