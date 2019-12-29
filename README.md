@@ -1,13 +1,20 @@
 # Sudo-music
 
 > This Project is Based on **KA RADIO**.
+  ![alt text](https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/81076657_2563459097233616_2276213034860937216_n.jpg?_nc_cat=101&_nc_ohc=JWsEdELPh5EAQkVh8JJPLEizlXosCUZNPnSSNaFzVenvHgg6MKqi9SE-A&_nc_ht=scontent-hbe1-1.xx&oh=7460cdfc59efd6f08a4aeb0b71be85fd&oe=5EA39C97)
+ 
 
 > The idea of this project is to create a **PCB KA RADIO** and Create Desktop App to control this Hardware and enjoy its benefits.
 
  *KA RADIO* is a WiFi shoutcast player based on ESP8266 and VS1053b chips, For more info and Guide Refer To: [INFO](https://github.com/karawin/Ka-Radio#-esp8266--vs1053-wifi-webradio-) , Thanks Karawin.
 
 ## Node MCU
+
   ![alt text](https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/80251516_2621205841330511_6699462169244729344_n.jpg?_nc_cat=105&_nc_ohc=uFOsP2s9jK0AQmHM0jkxMvi-qLQ7fXN3OiQDbq8mvWzBicXbuvqQd-AVg&_nc_ht=scontent-hbe1-1.xx&oh=3a320e249c1b484435839e20af7434a6&oe=5E6EF285)
+  
+  
+  
+
 using **Node MCU** based on **KA RADIO** it takes the data from internet then processe it using a decoder.
 
 What is *Node MCU* ...?
