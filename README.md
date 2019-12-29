@@ -25,6 +25,7 @@ What is *Node MCU* ...?
  If you are intruiged or even don't understand and want to understand more of IOT, Refer to this Link [IOT](https://www.iotforall.com/what-is-iot-simple-explanation/)
  
  ## Application
+ ![alt text](https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/79911672_552752855308852_8621852598510551040_n.jpg?_nc_cat=106&_nc_ohc=46k2VBXABEIAQli6xOLgoYOYDYOgeduSYPBuAF1rTCUJr9U2OPOpbSvXw&_nc_ht=scontent-hbe1-1.xx&oh=4a00ab05c36ea84d2bae5c2c237792fa&oe=5EA9B001)
  
  It is a desktop application ...**END** or so i wish! but sadly it has much more perks! (TBH ITS 2!)
  
