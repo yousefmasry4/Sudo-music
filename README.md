@@ -75,7 +75,6 @@ What is *Node MCU* ...?
  >It includes 2 Remotes (FR & IR)
  
  ### Remote (FR)
-  ![alt text](https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/79911672_552752855308852_8621852598510551040_n.jpg?_nc_cat=106&_nc_ohc=46k2VBXABEIAQli6xOLgoYOYDYOgeduSYPBuAF1rTCUJr9U2OPOpbSvXw&_nc_ht=scontent-hbe1-1.xx&oh=4a00ab05c36ea84d2bae5c2c237792fa&oe=5EA9B001)
  
  >Remote FR in the most Simplest Explanation --> controls radio channel :)
  
