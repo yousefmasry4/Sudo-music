@@ -1,9 +1,9 @@
 # Sudo-music
 
 > 'This Project is Based on **KA RADIO**.'
-  ![alt text](https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/81076657_2563459097233616_2276213034860937216_n.jpg?_nc_cat=101&_nc_ohc=JWsEdELPh5EAQkVh8JJPLEizlXosCUZNPnSSNaFzVenvHgg6MKqi9SE-A&_nc_ht=scontent-hbe1-1.xx&oh=7460cdfc59efd6f08a4aeb0b71be85fd&oe=5EA39C97)
- 
 
+  ![alt text](https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/80484065_2561504627457725_1807601973671755776_n.jpg?_nc_cat=101&_nc_ohc=DKhJNLkPRgcAQn_XONk3Upw64xvihg-WsrKlLPq-KyoIuItTUGwsrvPgw&_nc_ht=scontent-hbe1-1.xx&oh=ceb2de6c38600c321ea8d4b95ea03a0a&oe=5E65DDF5)
+ 
 > The idea of this project is to create a **PCB KA RADIO** and Create Desktop App to control this Hardware and enjoy its benefits.
 
  *KA RADIO* is a WiFi shoutcast player based on ESP8266 and VS1053b chips, For more info and Guide Refer To: [INFO](https://github.com/karawin/Ka-Radio#-esp8266--vs1053-wifi-webradio-) , Thanks Karawin.
@@ -65,6 +65,8 @@ What is *Node MCU* ...?
  ## Radio Transmitter
  
  >In this project it will be the FM transmitter-->If **"transmitter"** doesn't explain to you its purpose then continue reading normally; otherwise, Skip to **What is FM transmitter**.
+   ![alt text](https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/81076657_2563459097233616_2276213034860937216_n.jpg?_nc_cat=101&_nc_ohc=JWsEdELPh5EAQkVh8JJPLEizlXosCUZNPnSSNaFzVenvHgg6MKqi9SE-A&_nc_ht=scontent-hbe1-1.xx&oh=7460cdfc59efd6f08a4aeb0b71be85fd&oe=5EA39C97)
+ 
  
  ### What is a Transmitter
  
