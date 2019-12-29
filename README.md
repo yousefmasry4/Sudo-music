@@ -64,11 +64,13 @@ What is *Node MCU* ...?
  
  ## Radio Transmitter
  
- >In this project it will be the FM transmitter-->If ***"transmitter"*** doesn't explain to you its purpose then continue reading normally; otherwise, Skip to ***What is FM transmitter***.
+ >In this project it will be the FM transmitter-->If **"transmitter"** doesn't explain to you its purpose then continue reading normally; otherwise, Skip to **What is FM transmitter**.
  
  ### What is a Transmitter
  
- its to "Antenna"/"Carry" our signal at the range of what ever the transmitter is capable of ( which in this project 100-150 meter ) in which what ever reciever in that range can pick up that signal.
+ >AKA "Carrier"/"Antenna"/"Sender"
+ 
+ its to **Carry** our **signal** at the range of what ever the transmitter is capable of ( which in this project 100-150 meter ) in which what ever reciever in that range can pick up that signal.
  
  ### What is FM transmitter
  
