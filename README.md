@@ -26,11 +26,11 @@ What is *Node MCU* ...?
  
  ## Application
  
- It is a desktop application ...END or so i wish! but sadly it has much more perks! (TBH ITS 2!)
+ It is a desktop application ...**END** or so i wish! but sadly it has much more perks! (TBH ITS 2!)
  
  This Application can track/monitor what ever is playing and if desired obviously can also control the sound volume.
  
- BUT ITS NOT THAT SIMPLE! the volume has basically 6 settings
+ **BUT ITS NOT THAT SIMPLE!** the volume has basically **6 settings**
  
  1.Its main normal just high and low volume.
  
@@ -86,6 +86,7 @@ again thank you karawin for your contribution :)
 This project was made by: Youssef Elmasry & Mohamed Ahmed Ramadan.
 
 Language used in this project :
+
 1.Assembly
 
 2.HTML
