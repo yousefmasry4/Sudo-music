@@ -62,6 +62,21 @@ What is *Node MCU* ...?
  
  The FM transmitter turns the Sound to FM signal at the range of 100-150 meter.
  
+ ## Radio Transmitter
+ 
+ >In this project it will be the FM transmitter-->If ***"transmitter"*** doesn't explain to you its purpose then continue reading normally; otherwise, Skip to ***What is FM transmitter***.
+ 
+ ### What is a Transmitter
+ 
+ its to "Antenna"/"Carry" our signal at the range of what ever the transmitter is capable of ( which in this project 100-150 meter ) in which what ever reciever in that range can pick up that signal.
+ 
+ ### What is FM transmitter
+ 
+ Simply--> FM transmitter is a low-power FM radio transmitter that broadcasts a signal from a portable audio device (such as an MP3 player) to a standard FM radio.
+ 
+ Technically--> The mechanism behind the working of a radio transmitter depends on an oscillator that produces carrier signal on a particular frequency. When the particular signal needs to be controlled, then a voltage modulator is used. In the absence of the modulator, the frequency is transmitted at the pre-defined frequency signal. The FM signal is then transmitted into the outer space through an antenna.
+ 
+
  ## Radio reciever
   ![alt text](https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/80672858_531189950826696_2446395637881634816_n.jpg?_nc_cat=111&_nc_ohc=nISoLv8fruQAQm_nTI1v8iEQNzcYxEcufIfb2tyi6nrQ_VZV7bwijzKyg&_nc_ht=scontent-hbe1-1.xx&oh=99ce6883549416dbb8135fe1780730a8&oe=5E9B4C6A)
  >This project includes Radio reciever....duh!
