@@ -68,7 +68,7 @@ What is *Node MCU* ...?
    ![alt text](https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/81076657_2563459097233616_2276213034860937216_n.jpg?_nc_cat=101&_nc_ohc=JWsEdELPh5EAQkVh8JJPLEizlXosCUZNPnSSNaFzVenvHgg6MKqi9SE-A&_nc_ht=scontent-hbe1-1.xx&oh=7460cdfc59efd6f08a4aeb0b71be85fd&oe=5EA39C97)
  
  
- ### What is a Transmitter
+
  
  >AKA "Carrier"/"Antenna"/"Sender"
  
