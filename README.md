@@ -60,7 +60,7 @@ What is *Node MCU* ...?
  
  Well basically the Sound being tweeked going into the decoder goes to FM transmitter.
  
- The FM transmitter turns the Sound to FM signal at the range of 100-150 meter.
+ The FM transmitter turns the Sound to FM signal at the range of 0-350 meter.
  
  ## Radio Transmitter
  
